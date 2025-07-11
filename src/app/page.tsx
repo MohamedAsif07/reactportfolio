@@ -8,6 +8,7 @@ import ContactSection from '../components/ContactSection';
 import MatrixRain from '../components/MatrixRain';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../../public/styles.css';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -16,7 +17,6 @@ export default function Home() {
         <title>Mohamed Asif app dev</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Native Android App Developer Portfolio - Mohamed Asif" />
-        <link rel="stylesheet" href="/styles.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossOrigin="anonymous" referrerPolicy="no-referrer" />
       </Head>
       <Navbar />
@@ -34,7 +34,7 @@ export default function Home() {
           <div className="profile-section flex flex-col items-center justify-center">
             <div className="profile-circle rounded-full border-4 border-primary p-2 shadow-lg">
               <div className="profile-image w-40 h-40 overflow-hidden rounded-full">
-                <img src="/mypf.jpg" alt="Profile Picture" className="object-cover w-full h-full" />
+                <Image src="/mypf.jpg" alt="Profile Picture" width={160} height={160} className="object-cover w-full h-full" />
               </div>
             </div>
           </div>
