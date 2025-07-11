@@ -1,103 +1,105 @@
-import Image from "next/image";
+import Head from 'next/head';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import AboutSection from '../components/AboutSection';
+import ProjectsSection from '../components/ProjectsSection';
+import CybersecuritySection from '../components/CybersecuritySection';
+import ContactSection from '../components/ContactSection';
+import MatrixRain from '../components/MatrixRain';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import '../../public/styles.css';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <Head>
+        <title>Mohamed Asif app dev</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Native Android App Developer Portfolio - Mohamed Asif" />
+        <link rel="stylesheet" href="/styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossOrigin="anonymous" referrerPolicy="no-referrer" />
+      </Head>
+      <Navbar />
+      {/* Hero Section */}
+      <section id="home" className="hero relative flex items-center justify-center min-h-screen bg-gradient-to-br from-secondary to-primary/10 overflow-hidden">
+        <div className="hero-background absolute inset-0 z-0">
+          <div className="bg-grid absolute inset-0" />
+          <div className="bg-lines absolute inset-0" />
+          <div className="bg-particles absolute inset-0" />
+          <div className="bg-cyber-sphere absolute inset-0" />
+          <MatrixRain />
+          <div className="hologram-overlay absolute inset-0" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="hero-content relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl w-full px-4">
+          <div className="profile-section flex flex-col items-center justify-center">
+            <div className="profile-circle rounded-full border-4 border-primary p-2 shadow-lg">
+              <div className="profile-image w-40 h-40 overflow-hidden rounded-full">
+                <img src="/mypf.jpg" alt="Profile Picture" className="object-cover w-full h-full" />
+              </div>
+            </div>
+          </div>
+          <div className="hero-text flex flex-col justify-center">
+            <div className="text-container">
+              <h1 className="animated-text text-5xl md:text-6xl font-bold mb-4">
+                <span className="text-line glitch-text block">Creative</span>
+                <span className="text-line glitch-text block">Developer</span>
+              </h1>
+              <p className="subtitle text-xl mb-2">Native Android App Developer</p>
+              <div className="hero-description mb-4">
+                <p>Transforming ideas into secure, high-performance mobile applications with a focus on user experience and cybersecurity.</p>
+              </div>
+              <div className="hero-nav flex flex-wrap gap-4 mb-4">
+                <a href="#about" className="cta-btn primary flex items-center gap-2">
+                  <i className="fas fa-user" /> About Me
+                </a>
+                <a href="#projects" className="cta-btn primary flex items-center gap-2">
+                  <i className="fas fa-code" /> View Projects
+                </a>
+                <a href="#contact" className="cta-btn primary flex items-center gap-2">
+                  <i className="fas fa-envelope" /> Contact Me
+                </a>
+                <a href="/resume.pdf" className="cta-btn primary resume-btn flex items-center gap-2" download>
+                  <i className="fas fa-download" /> Download Resume
+                </a>
+              </div>
+              <div className="tech-stack-preview flex gap-4 md:gap-6 mt-4 bg-black/30 rounded-xl p-4 shadow-lg overflow-x-auto scrollbar-thin scrollbar-thumb-primary/60 scrollbar-track-transparent">
+                {[
+                  { icon: 'fab fa-android', label: 'Android' },
+                  { icon: 'fab fa-java', label: 'Java' },
+                  { icon: 'fas fa-shield-alt', label: 'Security' },
+                  { icon: 'fas fa-paint-brush', label: 'UI/UX' },
+                ].map((tech) => (
+                  <div
+                    key={tech.label}
+                    className="tech-icon flex flex-col items-center group cursor-pointer transition-transform duration-300 hover:scale-110 hover:text-primary relative"
+                  >
+                    <div className="icon-wrapper text-4xl md:text-5xl mb-1 drop-shadow-lg group-hover:text-primary transition-colors duration-300">
+                      <i className={tech.icon} />
+                    </div>
+                    <span className="text-xs md:text-sm font-semibold mt-1 text-white group-hover:text-primary transition-colors duration-300">
+                      {tech.label}
+                    </span>
+                    <span className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-black/80 text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300 whitespace-nowrap z-20">
+                      {tech.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center z-10">
+          <div className="mouse w-6 h-10 border-2 border-primary rounded-full flex items-start justify-center mb-2">
+            <div className="wheel w-1 h-3 bg-primary rounded-full mt-2 animate-bounce" />
+          </div>
+         
+        </div>
+      </section>
+      <AboutSection />
+      <ProjectsSection />
+      <CybersecuritySection />
+      <ContactSection />
+      <Footer />
+    </>
   );
 }
