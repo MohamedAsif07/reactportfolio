@@ -18,7 +18,7 @@ export default function TerminalEffect() {
     if (!el) return;
     let currentCommand = 0;
     let currentIndex = 0;
-    let typingSpeed = 50;
+    const typingSpeed = 50;
     let timeoutId: NodeJS.Timeout;
 
     function typeCommand(command: string) {

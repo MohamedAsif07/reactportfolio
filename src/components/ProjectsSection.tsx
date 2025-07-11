@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const projects = [
   {
     title: 'Ride-Booking App',
@@ -63,12 +65,12 @@ export default function ProjectsSection() {
         <div className="title-decoration mx-auto mt-2 mb-4 w-24 h-1 bg-primary rounded-full" />
       </div>
       <div className="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {projects.map((project, idx) => (
+        {projects.map((project) => (
           <div className="project-card bg-card-bg rounded-xl shadow-lg overflow-hidden" key={project.title}>
             <div className="card-inner relative group">
               <div className="card-front">
                 <div className="project-image relative">
-                  <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+                  <Image src={project.image} alt={project.title} width={400} height={192} className="w-full h-48 object-cover" />
                   <div className="project-overlay absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition bg-black/60">
                     {project.overlay ? (
                       <div className="tech-stack flex gap-2">
